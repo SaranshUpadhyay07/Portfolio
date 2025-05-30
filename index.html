@@ -34,7 +34,7 @@
       </div>
       <!-- Right Side - Contact Me -->
       <div class="order-2">
-        <a class="nav-link contactMe text-white" href="mailto:saransh.upadhyay07@gmail.com"> &nbsp;Contact Me</a>
+        <a class="nav-link contactMe text-white" href="mailto:saransh.upadhyay07@gmail.com" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> &nbsp;Contact Me</a>
       </div>
 
       <!-- Toggler for mobile -->
@@ -147,6 +147,24 @@
     </div>
   </div>
 
+<!-- Modal -->
+<div class="modal fade social-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Experience Section -->
   <div class="custom-jumbotron jumbotron-fluid">
@@ -173,6 +191,12 @@
         document.querySelector('.typed-cursor').style.display = 'none';
       }
     });
+    const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
   </script>
 
 </body>
